@@ -1,0 +1,23 @@
+a .room_heberg {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: white;
+  border: none;
+  width: 266px;
+  height: auto;
+}
+
+.restaurant {
+  width: 266px;
+}
+
+.arrondi {
+  border-radius: 10px 10px 0 0;
+  width: 266px;
+  height: 130px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

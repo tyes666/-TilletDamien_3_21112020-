@@ -1,0 +1,29 @@
+$primaire:#9356dc;
+$secondaire:#ff79da;
+$tertiaire:#99e2d0;
+
+
+#restaurants {
+    display: flex;
+    flex-direction: column;
+}
+
+a .room_heberg {
+    border-radius: 10px;
+    background-color:white;
+    border: none; 
+    width: 100%;
+    
+}      
+
+.restaurant {
+    width:266px;
+}
+
+.arrondi {
+    border-radius: 10px 10px 0 0;
+    width: 266px;
+    height: 130px;
+    object-fit: cover; 
+}
+
