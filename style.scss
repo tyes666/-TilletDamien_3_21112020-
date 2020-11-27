@@ -40,6 +40,12 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    h3 {
+        color:$iconegris;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }   
     #btn_search {
         display: flex;
@@ -88,21 +94,21 @@ header {
         background-color:white;
         border: none; 
         text-decoration: none;  
-        color:black;         
-    }      
-    .restaurant {
-        width:100%;
-        margin-bottom: 15px;
+        color:black;
         position: relative;
         .nouveau {
             background-color: $tertiaire;
             position: absolute;
             padding: 10px;
-            left: 250px;
+            right: 10px;
             top:10px;
             font-weight: bold;
             color:#008766
-        }    
+        }             
+    }      
+    .restaurant {
+        width:100%;
+        margin-bottom: 15px;        
     }
     .restaurant_nom {
         font-weight: bold;
@@ -160,6 +166,7 @@ header {
 }
 
 footer {
+    width:100%;
     color:white;
     background-color: $fondfonce;
     
@@ -191,4 +198,35 @@ footer {
     fill:white;
     padding-left: 20px;
 }
+}
+
+
+@media screen and (min-width: 668px) {
+    body {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+    #container {
+        max-width: 1320px;
+        
+    }
+    .fonct_notice {
+        display: flex;
+        justify-content: center;
+    }
+    .arrondi {
+        height: 300px;        
+    }
+    .logofooter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
