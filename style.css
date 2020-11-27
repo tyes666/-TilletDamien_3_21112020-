@@ -32,6 +32,12 @@ header .logo {
   flex-direction: column;
   align-items: center;
 }
+#search h3 {
+  color: #7e7e7e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #search #btn_search {
   display: flex;
   justify-content: center;
@@ -77,20 +83,20 @@ header .logo {
   border: none;
   text-decoration: none;
   color: black;
+  position: relative;
+}
+#restaurants a .nouveau {
+  background-color: #99e2d0;
+  position: absolute;
+  padding: 10px;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+  color: #008766;
 }
 #restaurants .restaurant {
   width: 100%;
   margin-bottom: 15px;
-  position: relative;
-}
-#restaurants .restaurant .nouveau {
-  background-color: #99e2d0;
-  position: absolute;
-  padding: 10px;
-  left: 250px;
-  top: 10px;
-  font-weight: bold;
-  color: #008766;
 }
 #restaurants .restaurant_nom {
   font-weight: bold;
@@ -146,6 +152,7 @@ header .logo {
 }
 
 footer {
+  width: 100%;
   color: white;
   background-color: #353535;
 }
@@ -174,6 +181,40 @@ footer .logofooter {
   width: 20%;
   fill: white;
   padding-left: 20px;
+}
+
+@media screen and (min-width: 668px) {
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #container {
+    max-width: 1320px;
+  }
+
+  .fonct_notice {
+    display: flex;
+    justify-content: center;
+  }
+
+  .arrondi {
+    height: 300px;
+  }
+
+  .logofooter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
