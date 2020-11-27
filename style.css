@@ -114,8 +114,35 @@ header .logo {
   color: #9356dc;
 }
 
-.logofooter {
+footer {
+  color: white;
+  background-color: #353535;
+}
+footer ul {
+  list-style: none;
+  padding-left: 20px;
+}
+footer li {
+  padding-bottom: 20px;
+}
+footer .fa-utensils {
+  padding-right: 20px;
+}
+footer .fa-hands-helping {
+  width: 13px;
+  padding-right: 20px;
+}
+footer .bold {
+  font-weight: bold;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer .logofooter {
   width: 20%;
+  fill: white;
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
