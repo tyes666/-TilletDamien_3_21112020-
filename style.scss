@@ -70,14 +70,35 @@ header {
 #restaurants {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 1350px;
+    width:100%;
+    background-color:$fondclair;
+    padding-bottom: 40px;
+    
+    h2 {
+        align-self: start;
+        padding-left: 20px;
+    }
     a  {
+        width:90%;
         border-radius: 10px;
         background-color:white;
         border: none; 
-        width: 100%;    
+        text-decoration: none;  
+        color:black;         
     }      
     .restaurant {
         width:100%;
+        margin-bottom: 15px;
+    }
+    .restaurant_nom {
+        font-weight: bold;
+        padding-left: 10px;
+    }
+    .restaurant_lieu {
+        padding-left: 10px;
     }
     .arrondi {
         border-radius: 10px 10px 0 0;
@@ -89,6 +110,7 @@ header {
 
 #fonctionnement {
     width:90%;
+    margin-bottom: 50px;
 
     .fonct_notice {
         width:90%;
@@ -129,6 +151,7 @@ header {
 footer {
     color:white;
     background-color: $fondfonce;
+    
 
     ul {
         list-style: none;
