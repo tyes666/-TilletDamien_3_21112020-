@@ -76,6 +76,7 @@ header {
     width:100%;
     background-color:$fondclair;
     padding-bottom: 40px;
+
     
     h2 {
         align-self: start;
@@ -92,6 +93,16 @@ header {
     .restaurant {
         width:100%;
         margin-bottom: 15px;
+        position: relative;
+        .nouveau {
+            background-color: $tertiaire;
+            position: absolute;
+            padding: 10px;
+            left: 250px;
+            top:10px;
+            font-weight: bold;
+            color:#008766
+        }    
     }
     .restaurant_nom {
         font-weight: bold;
