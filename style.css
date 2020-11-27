@@ -21,7 +21,7 @@ header .logo {
 
 #search {
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
 }
 #search p {
   margin-bottom: 5px;
@@ -38,11 +38,11 @@ header .logo {
   align-items: center;
   width: 100%;
   height: 50px;
-  background-color: #b3b4b8;
+  background-color: #eaeaea;
 }
 #search input {
   border: none;
-  background-color: #b3b4b8;
+  background-color: #eaeaea;
   padding-left: 10px;
 }
 #search .btn {
@@ -60,23 +60,58 @@ header .logo {
   display: flex;
   flex-direction: column;
 }
-
-a {
+#restaurants a {
   border-radius: 10px;
   background-color: white;
   border: none;
   width: 100%;
 }
-
-.restaurant {
+#restaurants .restaurant {
   width: 100%;
 }
-
-.arrondi {
+#restaurants .arrondi {
   border-radius: 10px 10px 0 0;
   width: 100%;
   height: 200px;
   object-fit: cover;
+}
+
+#fonctionnement {
+  width: 90%;
+}
+#fonctionnement .fonct_notice {
+  width: 90%;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #f6f6f6;
+  font-weight: bold;
+}
+#fonctionnement .number {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 38px;
+  left: -9px;
+  background-color: #9356dc;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  color: white;
+}
+#fonctionnement .fa-mobile-alt {
+  padding-right: 30px;
+  padding-left: 15px;
+  color: #7e7e7e;
+}
+#fonctionnement .fa-list {
+  padding-right: 24px;
+  padding-left: 15px;
+  color: #7e7e7e;
+}
+#fonctionnement .fa-store {
+  padding-right: 21px;
+  padding-left: 15px;
+  color: #9356dc;
 }
 
 .logofooter {
