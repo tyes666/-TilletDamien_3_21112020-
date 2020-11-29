@@ -10,13 +10,21 @@ body {
 }
 
 header {
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 header .logo {
-  width: 50%;
+  width: 200px;
+}
+header .fa-arrow-left {
+  position: absolute;
+  top: 37px;
+  left: 20px;
+  text-decoration: none;
+  color: black;
 }
 
 #search {
@@ -181,6 +189,59 @@ footer .logofooter {
   width: 20%;
   fill: white;
   padding-left: 20px;
+}
+
+.jpg_page {
+  width: 100%;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  cursor: pointer;
+}
+
+.palette {
+  width: 100%;
+  border-radius: 40px 40px 0px 0px;
+  background-color: blue;
+  position: relative;
+  top: -40px;
+  padding-top: 40px;
+}
+.palette .entrees, .palette .plats, .palette .desserts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 300px;
+}
+.palette .entrees h2, .palette .plats h2, .palette .desserts h2 {
+  align-self: start;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+.palette .plat {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: white;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.palette .plat .suite {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+  width: 90%;
 }
 
 @media screen and (min-width: 668px) {
