@@ -18,13 +18,21 @@ body {
 }
 
 header {
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;  
     .logo {    
-        width: 50%;    
-    }  
+        width: 200px;    
+    }
+    .fa-arrow-left {
+        position: absolute;
+        top:37px;
+        left:20px;
+        text-decoration: none;
+        color:black;
+    }
 }
 
 
@@ -200,6 +208,63 @@ footer {
 }
 }
 
+// page la palette
+
+.jpg_page {
+    width:100%;
+}
+.btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius:20px;        
+    background-image:linear-gradient($secondaire, $primaire);
+    color: white;
+    cursor: pointer;
+}
+
+.palette {
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+    background-color: blue;
+    position: relative;
+    top:-40px;
+    padding-top: 40px;
+
+    .entrees, .plats, .desserts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height:300px;
+
+        h2 {
+            align-self: start;
+            padding-left: 20px;
+            padding-top: 10px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .plat {
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background-color: white;
+        width:90%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+
+        .suite {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 30px;
+            width:90%;
+        }        
+    }
+}
 
 @media screen and (min-width: 668px) {
     body {
@@ -230,3 +295,4 @@ footer {
         align-items: center;
     }
 }
+
