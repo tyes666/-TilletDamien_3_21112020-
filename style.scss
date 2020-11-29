@@ -7,7 +7,21 @@ $fondfonce:#353535;
 $iconegris:#7e7e7e;
 
 
+@font-face{
+	font-family:"Roboto";
+    src:url(Roboto/Roboto-Regular.ttf);	
+}
+
+@font-face{
+	font-family:"Shrikhand";
+    src:url(Shrikhand/Shrikhand-Regular.ttf);
+}
+
+h1, h2, h3, h4 {
+    font-family:"Shrikhand", times, serif;
+}
 body {
+    font-family:"Roboto", times, serif;
     margin-left: 0px;
     margin-right: 0px;
 }
