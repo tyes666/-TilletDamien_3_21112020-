@@ -6,10 +6,6 @@
   font-family: "Shrikhand";
   src: url(Shrikhand/Shrikhand-Regular.ttf);
 }
-h1, h2, h3, h4 {
-  font-family: "Shrikhand", times, serif;
-}
-
 body {
   font-family: "Roboto", times, serif;
   margin-left: 0px;
@@ -48,16 +44,17 @@ header .fa-arrow-left {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-#search form, #search h2 {
+#search form, #search h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#search h3 {
+#search h2 {
   color: #7e7e7e;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 0.9em;
 }
 #search #btn_search {
   display: flex;
@@ -93,7 +90,7 @@ header .fa-arrow-left {
   background-color: #f6f6f6;
   padding-bottom: 40px;
 }
-#restaurants h2 {
+#restaurants h3 {
   align-self: start;
   padding-left: 20px;
 }
@@ -177,6 +174,11 @@ footer {
   color: white;
   background-color: #353535;
 }
+footer h4 {
+  font-family: "Shrikhand", times, serif;
+  color: white;
+  padding-left: 20px;
+}
 footer ul {
   list-style: none;
   padding-left: 20px;
@@ -198,11 +200,6 @@ footer a {
   color: white;
   text-decoration: none;
 }
-footer .logofooter {
-  width: 20%;
-  fill: white;
-  padding-left: 20px;
-}
 
 .jpg_page {
   width: 100%;
@@ -220,25 +217,50 @@ footer .logofooter {
 }
 
 .palette {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   border-radius: 40px 40px 0px 0px;
   background-color: blue;
   position: relative;
   top: -40px;
-  padding-top: 40px;
+}
+.palette h1 {
+  font-family: "Shrikhand", times, serif;
+  padding-left: 20px;
+}
+.palette .plats {
+  margin-top: -30px;
 }
 .palette .entrees, .palette .plats, .palette .desserts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 300px;
+  height: 350px;
 }
 .palette .entrees h2, .palette .plats h2, .palette .desserts h2 {
   align-self: start;
   padding-left: 20px;
   padding-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+.palette .entrees .ligne, .palette .plats .ligne, .palette .desserts .ligne {
+  margin-top: -30px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  align-self: start;
+}
+.palette .entrees .ligne hr, .palette .plats .ligne hr, .palette .desserts .ligne hr {
+  color: #99e2d0;
+  background-color: #99e2d0;
+  width: 60px;
+  height: 3px;
+}
+.palette .entrees .ligne .btn, .palette .plats .ligne .btn, .palette .desserts .ligne .btn {
+  display: flex;
+  align-self: center;
 }
 .palette .plat {
   display: flex;
@@ -249,6 +271,7 @@ footer .logofooter {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  margin-bottom: 20px;
 }
 .palette .plat .suite {
   display: flex;
