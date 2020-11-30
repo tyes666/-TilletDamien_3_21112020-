@@ -76,8 +76,13 @@ header .fa-arrow-left {
   padding-bottom: 10px;
   border-radius: 20px;
   background-image: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0px 5px 5px #eaeaea;
   color: white;
   cursor: pointer;
+}
+#search .btn :focus {
+  filter: alpha(opacity=70);
+  opacity: 0.7;
 }
 
 #restaurants {
@@ -102,6 +107,7 @@ header .fa-arrow-left {
   text-decoration: none;
   color: black;
   position: relative;
+  box-shadow: 0px 5px 5px #eaeaea;
 }
 #restaurants a .nouveau {
   background-color: #99e2d0;
@@ -140,6 +146,7 @@ header .fa-arrow-left {
   padding: 20px;
   background-color: #f6f6f6;
   font-weight: bold;
+  box-shadow: 0px 5px 5px #eaeaea;
 }
 #fonctionnement .number {
   display: flex;
@@ -205,26 +212,16 @@ footer a {
   width: 100%;
 }
 
-.btn {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 20px;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  color: white;
-  cursor: pointer;
-}
-
 .palette {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   border-radius: 40px 40px 0px 0px;
-  background-color: blue;
+  background-color: #eaeaea;
   position: relative;
   top: -40px;
+  font-size: 0.85em;
 }
 .palette h1 {
   font-family: "Shrikhand", times, serif;
@@ -258,9 +255,23 @@ footer a {
   width: 60px;
   height: 3px;
 }
-.palette .entrees .ligne .btn, .palette .plats .ligne .btn, .palette .desserts .ligne .btn {
-  display: flex;
+.palette .btn_commander {
   align-self: center;
+}
+.palette .btn_commander .btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 0px 5px 5px #eaeaea;
+  color: white;
+  cursor: pointer;
+}
+.palette .btn_commander .btn :focus {
+  filter: alpha(opacity=70);
+  opacity: 0.7;
 }
 .palette .plat {
   display: flex;
