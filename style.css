@@ -151,9 +151,10 @@ header .fa-arrow-left {
   color: white;
   cursor: pointer;
 }
-#search .btn :focus {
+#search .btn:hover {
   filter: alpha(opacity=70);
   opacity: 0.7;
+  box-shadow: 0px 5px 5px #353535;
 }
 
 #restaurants {
@@ -305,7 +306,7 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 350px;
+  margin-bottom: 20px;
 }
 .palette .entrees h2, .palette .plats h2, .palette .desserts h2 {
   align-self: start;
@@ -340,26 +341,122 @@ footer a {
   color: white;
   cursor: pointer;
 }
-.palette .btn_commander .btn :focus {
+.palette .btn_commander .btn:hover {
   filter: alpha(opacity=70);
   opacity: 0.7;
+  box-shadow: 0px 5px 5px #353535;
 }
-.palette .plat {
+.palette .choix1, .palette .choix2, .palette .choix3 {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   background-color: white;
   width: 90%;
   padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+  opacity: 0;
+  height: 72px;
 }
-.palette .plat .suite {
+.palette .choix1:hover .check, .palette .choix2:hover .check, .palette .choix3:hover .check {
+  display: flex;
+}
+.palette .choix1 p, .palette .choix2 p, .palette .choix3 p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.palette .choix1 .plat, .palette .choix2 .plat, .palette .choix3 .plat {
+  font-weight: bold;
+}
+.palette .choix1 .suite, .palette .choix2 .suite, .palette .choix3 .suite {
   display: flex;
   justify-content: space-between;
-  padding-right: 30px;
-  width: 90%;
+  height: 40px;
+}
+.palette .choix1 .prix, .palette .choix2 .prix, .palette .choix3 .prix {
+  padding-right: 20px;
+  font-weight: bold;
+  align-self: end;
+}
+.palette .choix1 {
+  animation: apparition 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.palette .choix2 {
+  animation: apparition2 1s;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes apparition2 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.palette .choix3 {
+  animation: apparition3 1s;
+  animation-delay: 750ms;
+  animation-fill-mode: forwards;
+}
+@keyframes apparition3 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.palette .check {
+  display: flex;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  text-align: center;
+  width: 20%;
+  height: 82px;
+  top: -41px;
 }
 
 @media screen and (min-width: 668px) {
