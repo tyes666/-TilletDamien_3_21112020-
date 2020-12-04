@@ -144,9 +144,10 @@ header {
         color: white;
         cursor: pointer;
 
-        :focus {
+        &:hover {
             filter: alpha(opacity=70);
             opacity: 0.7;
+            box-shadow: 0px 5px 5px $fondfonce;
         }
     }
 }
@@ -315,7 +316,7 @@ footer {
         display: flex;
         flex-direction: column;        
         align-items: center;        
-        height:350px;
+        margin-bottom: 20px;
        
         h2 {
             align-self: start;
@@ -354,30 +355,113 @@ footer {
         color: white;
         cursor: pointer;
 
-        :focus {
+        &:hover {
             filter: alpha(opacity=70);
             opacity: 0.7;
+            box-shadow: 0px 5px 5px $fondfonce;
         }}}
-    
 
-    .plat {
-        display: flex;
-        flex-direction: column;
-        border-radius: 10px;
-        background-color: white;
-        width:90%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        margin-bottom: 20px;
-
-        .suite {
+        .choix1, .choix2, .choix3 {
             display: flex;
-            justify-content: space-between;
-            padding-right: 30px;
+            flex-direction: column;
+            border-radius: 10px;
+            background-color: white;
             width:90%;
-        }        
+            padding-top: 10px;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            opacity: 0;
+            height:72px;
+
+            &:hover .check{
+                display: flex;
+                
+            }
+           
+            p {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+    
+            .plat {
+                font-weight: bold;
+            }
+            .suite {
+                display: flex;
+                justify-content: space-between;
+                height:40px;                  
+            }    
+            .prix {
+                padding-right: 20px;
+                font-weight: bold;
+                align-self: end;
+            }    
+        }    
+    
+    .choix1 {
+
+        animation : apparition 1s;
+        animation-fill-mode: forwards;
     }
+
+        @keyframes apparition {
+            0% { opacity: 0; }
+            25% { opacity: 0.25; }
+            50% { opacity: 0.5; }
+            75% { opacity : 0.75; }
+            100% { opacity: 1; }
+        }
+
+    .choix2 {
+
+        animation : apparition2 1s;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+        }
+    
+        @keyframes apparition2 {
+            0% { opacity: 0; }
+            25% { opacity: 0.25; }
+            50% { opacity: 0.5; }
+            75% { opacity : 0.75; }
+            100% { opacity: 1; }
+        }   
+        
+    .choix3 {
+
+        animation : apparition3 1s;
+        animation-delay: 750ms;
+        animation-fill-mode: forwards;
+        }
+        
+        @keyframes apparition3 {
+            0% { opacity: 0; }
+            25% { opacity: 0.25; }
+            50% { opacity: 0.5; }
+            75% { opacity : 0.75; }
+            100% { opacity: 1; }
+        }       
+    
+    .check {
+        display: flex;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #99e2d0;
+        border:none;        
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        text-align: center;
+        width:20%;
+        height:82px;
+        top:-41px;
+        
+                              
+        }
+        
+
+
 }
 
 @media screen and (min-width: 668px) {
