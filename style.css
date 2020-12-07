@@ -198,8 +198,14 @@ header .fa-arrow-left {
   font-weight: bold;
   padding-left: 10px;
 }
+#restaurants .fa-heart {
+  position: relative;
+  left: 320px;
+  top: -10px;
+}
 #restaurants .restaurant_lieu {
   padding-left: 10px;
+  margin-bottom: -30px;
 }
 #restaurants .arrondi {
   border-radius: 10px 10px 0 0;
@@ -296,8 +302,11 @@ footer a {
   font-size: 0.85em;
 }
 .palette h1 {
+  display: flex;
+  justify-content: space-between;
   font-family: "Shrikhand", times, serif;
   padding-left: 20px;
+  padding-right: 40px;
 }
 .palette .plats {
   margin-top: -30px;
@@ -359,8 +368,56 @@ footer a {
   opacity: 0;
   height: 72px;
 }
+.palette .choix1 .check, .palette .choix2 .check, .palette .choix3 .check {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  text-align: center;
+  width: 0px;
+  height: 82px;
+  top: -41px;
+}
+.palette .choix1 .fa-check, .palette .choix2 .fa-check, .palette .choix3 .fa-check {
+  display: none;
+  position: relative;
+  top: 34px;
+  background-color: white;
+  border-radius: 50%;
+  color: #008766;
+  padding: 5px;
+}
 .palette .choix1:hover .check, .palette .choix2:hover .check, .palette .choix3:hover .check {
-  display: flex;
+  display: inline;
+  animation: progresscheck 1s;
+  animation-fill-mode: forwards;
+}
+.palette .choix1:hover .check .fa-check, .palette .choix2:hover .check .fa-check, .palette .choix3:hover .check .fa-check {
+  display: inline;
+  animation: progresscheck2 1s;
+}
+@keyframes progresscheck2 {
+  0% {
+    transform: rotate 0deg;
+    opacity: 0;
+  }
+  50% {
+    transform: rotate 180deg;
+  }
+  100% {
+    transform: rotate 360deg;
+  }
+}
+@keyframes progresscheck {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
 }
 .palette .choix1 p, .palette .choix2 p, .palette .choix3 p {
   margin-top: 5px;
@@ -375,9 +432,8 @@ footer a {
   height: 40px;
 }
 .palette .choix1 .prix, .palette .choix2 .prix, .palette .choix3 .prix {
-  padding-right: 20px;
+  padding-right: 10px;
   font-weight: bold;
-  align-self: end;
 }
 .palette .choix1 {
   animation: apparition 1s;
@@ -443,20 +499,6 @@ footer a {
   100% {
     opacity: 1;
   }
-}
-.palette .check {
-  display: flex;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: #99e2d0;
-  border: none;
-  border-radius: 0 10px 10px 0;
-  position: relative;
-  text-align: center;
-  width: 20%;
-  height: 82px;
-  top: -41px;
 }
 
 @media screen and (min-width: 668px) {

@@ -1,6 +1,7 @@
 $primaire:#9356dc;
 $secondaire:#ff79da;
 $tertiaire:#99e2d0;
+$tertiairetexte:#008766;
 $fondclair:#f6f6f6;
 $fondmoyen:#eaeaea;
 $fondfonce:#353535;
@@ -185,7 +186,7 @@ header {
             right: 10px;
             top:10px;
             font-weight: bold;
-            color:#008766
+            color: $tertiairetexte;
         }             
     }      
     .restaurant {
@@ -196,8 +197,14 @@ header {
         font-weight: bold;
         padding-left: 10px;
     }
+    .fa-heart {
+        position: relative;
+        left: 320px;
+        top:-10px;
+    }
     .restaurant_lieu {
         padding-left: 10px;
+        margin-bottom: -30px;
     }
     .arrondi {
         border-radius: 10px 10px 0 0;
@@ -304,8 +311,11 @@ footer {
     
 
     h1 {
+        display: flex;
+        justify-content: space-between;
         font-family:"Shrikhand", times, serif;
         padding-left: 20px;
+        padding-right: 40px;
     }
 
     .plats {
@@ -373,10 +383,59 @@ footer {
             cursor: pointer;
             opacity: 0;
             height:72px;
-
-            &:hover .check{
-                display: flex;
+            
+            .check {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                background-color:$tertiaire;
+                border:none;        
+                border-radius: 0 10px 10px 0;
+                position: relative;
+                text-align: center;
+                width:0px;
+                height:82px;
+                top:-41px;
                 
+                                 
+            }
+            .fa-check {
+                display: none;
+                position: relative;
+                top: 34px;
+                background-color: white;
+                border-radius: 50%;
+                color:$tertiairetexte;
+                padding: 5px;
+            }
+            
+
+            &:hover .check{  
+                display: inline;  
+                animation: progresscheck 1s ;
+                animation-fill-mode: forwards; 
+                .fa-check{
+                    display: inline;
+                    animation: progresscheck2 1s ;
+                    
+                }
+    @keyframes progresscheck2 {
+        0% { transform: rotate (0deg); opacity: 0;}
+        50% { transform: rotate (180deg); }
+        100% { transform: rotate (360deg); }
+          
+    }                           
+    
+    @keyframes progresscheck {
+        0% {  
+            width: 0%;          
+        } 
+        100% { 
+            width: 20%; 
+        } 
+    }
+                
+                  
             }
            
             p {
@@ -393,9 +452,11 @@ footer {
                 height:40px;                  
             }    
             .prix {
-                padding-right: 20px;
-                font-weight: bold;
-                align-self: end;
+                padding-right: 10px;
+                font-weight: bold;                
+               
+                
+                
             }    
         }    
     
@@ -443,26 +504,7 @@ footer {
             100% { opacity: 1; }
         }       
     
-    .check {
-        display: flex;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        background-color: #99e2d0;
-        border:none;        
-        border-radius: 0 10px 10px 0;
-        position: relative;
-        text-align: center;
-        width:20%;
-        height:82px;
-        top:-41px;
-        
-                              
-        }
-        
-
-
-}
+    }
 
 @media screen and (min-width: 668px) {
     body {
