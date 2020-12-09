@@ -120,6 +120,7 @@ header {
         align-items: center;
         font-size: 0.9em;
         
+        
     }   
     #btn_search {
         display: flex;
@@ -334,6 +335,7 @@ footer {
             padding-top: 10px;
             margin-bottom: 30px;
             margin-top: 0px;
+            
         }
         .ligne {
             margin-top: -30px;
@@ -373,11 +375,10 @@ footer {
 
         .choix1, .choix2, .choix3 {
             display: flex;
-            flex-direction: column;
-            border-radius: 10px;
+            justify-content: space-between;
+            border-radius: 20px;
             background-color: white;
             width:90%;
-            padding-top: 10px;
             padding-left: 10px;
             margin-bottom: 20px;
             cursor: pointer;
@@ -385,71 +386,61 @@ footer {
             height:72px;
             
             .check {
-                display: none;
-                justify-content: center;
-                align-items: center;
                 background-color:$tertiaire;
                 border:none;        
                 border-radius: 0 10px 10px 0;
-                position: relative;
                 text-align: center;
-                width:0px;
-                height:82px;
-                top:-41px;
-                
-                                 
+                width:0;
+                transition: all 1s ;
+                            
+                     
+            }
+            .column {
+                display: flex;
+                flex-direction:column;
+                flex: 2 2 auto;
+                align-content:space-between;
+                width:375px;
+
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding-top: 10px;
+                    padding-bottom: 15px;
+                    font-size: 1em;
+                }
             }
             .fa-check {
                 display: none;
-                position: relative;
-                top: 34px;
+                position: relative;                
+                top:30px;
                 background-color: white;
                 border-radius: 50%;
                 color:$tertiairetexte;
                 padding: 5px;
+                transition: all 1s ;
+                
             }
             
 
             &:hover .check{  
-                display: inline;  
-                animation: progresscheck 1s ;
-                animation-fill-mode: forwards; 
+                width:20%;
+                                
                 .fa-check{
                     display: inline;
-                    animation: progresscheck2 1s ;
+                    transform: rotate(360deg);
                     
                 }
-    @keyframes progresscheck2 {
-        0% { transform: rotate (0deg); opacity: 0;}
-        50% { transform: rotate (180deg); }
-        100% { transform: rotate (360deg); }
-          
-    }                           
-    
-    @keyframes progresscheck {
-        0% {  
-            width: 0%;          
-        } 
-        100% { 
-            width: 20%; 
-        } 
-    }
-                
-                  
+                    
             }
            
-            p {
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
-    
             .plat {
                 font-weight: bold;
             }
-            .suite {
+            .accompagnement_prix {
                 display: flex;
                 justify-content: space-between;
-                height:40px;                  
+                align-items: center;                 
             }    
             .prix {
                 padding-right: 10px;
