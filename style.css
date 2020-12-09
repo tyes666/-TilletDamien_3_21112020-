@@ -357,11 +357,10 @@ footer a {
 }
 .palette .choix1, .palette .choix2, .palette .choix3 {
   display: flex;
-  flex-direction: column;
-  border-radius: 10px;
+  justify-content: space-between;
+  border-radius: 20px;
   background-color: white;
   width: 90%;
-  padding-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
   cursor: pointer;
@@ -369,67 +368,51 @@ footer a {
   height: 72px;
 }
 .palette .choix1 .check, .palette .choix2 .check, .palette .choix3 .check {
-  display: none;
-  justify-content: center;
-  align-items: center;
   background-color: #99e2d0;
   border: none;
   border-radius: 0 10px 10px 0;
-  position: relative;
   text-align: center;
-  width: 0px;
-  height: 82px;
-  top: -41px;
+  width: 0;
+  transition: all 1s;
+}
+.palette .choix1 .column, .palette .choix2 .column, .palette .choix3 .column {
+  display: flex;
+  flex-direction: column;
+  flex: 2 2 auto;
+  align-content: space-between;
+  width: 375px;
+}
+.palette .choix1 .column h3, .palette .choix2 .column h3, .palette .choix3 .column h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 1em;
 }
 .palette .choix1 .fa-check, .palette .choix2 .fa-check, .palette .choix3 .fa-check {
   display: none;
   position: relative;
-  top: 34px;
+  top: 30px;
   background-color: white;
   border-radius: 50%;
   color: #008766;
   padding: 5px;
+  transition: all 1s;
 }
 .palette .choix1:hover .check, .palette .choix2:hover .check, .palette .choix3:hover .check {
-  display: inline;
-  animation: progresscheck 1s;
-  animation-fill-mode: forwards;
+  width: 20%;
 }
 .palette .choix1:hover .check .fa-check, .palette .choix2:hover .check .fa-check, .palette .choix3:hover .check .fa-check {
   display: inline;
-  animation: progresscheck2 1s;
-}
-@keyframes progresscheck2 {
-  0% {
-    transform: rotate 0deg;
-    opacity: 0;
-  }
-  50% {
-    transform: rotate 180deg;
-  }
-  100% {
-    transform: rotate 360deg;
-  }
-}
-@keyframes progresscheck {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 20%;
-  }
-}
-.palette .choix1 p, .palette .choix2 p, .palette .choix3 p {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  transform: rotate(360deg);
 }
 .palette .choix1 .plat, .palette .choix2 .plat, .palette .choix3 .plat {
   font-weight: bold;
 }
-.palette .choix1 .suite, .palette .choix2 .suite, .palette .choix3 .suite {
+.palette .choix1 .accompagnement_prix, .palette .choix2 .accompagnement_prix, .palette .choix3 .accompagnement_prix {
   display: flex;
   justify-content: space-between;
-  height: 40px;
+  align-items: center;
 }
 .palette .choix1 .prix, .palette .choix2 .prix, .palette .choix3 .prix {
   padding-right: 10px;
