@@ -35,7 +35,7 @@ body {
   animation: loaderone 3s linear;
 }
 
-.sloader div:nth-child(2) {
+.loader div:nth-child(2) {
   border: 10px solid transparent;
   border-bottom-color: #9356dc;
   animation: loadertwo 3s linear;
@@ -171,17 +171,32 @@ header .fa-arrow-left {
   align-self: start;
   padding-left: 20px;
 }
-#restaurants a {
-  width: 90%;
+#restaurants .contain {
+  display: flex;
+  justify-content: center;
   border-radius: 10px;
   background-color: white;
   border: none;
   text-decoration: none;
   color: black;
-  position: relative;
   box-shadow: 0px 5px 5px #eaeaea;
+  position: relative;
 }
-#restaurants a .nouveau {
+#restaurants .contain .restaurant {
+  width: 100%;
+  margin-bottom: 15px;
+}
+#restaurants .contain .restaurant .arrondi {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#restaurants .contain .restaurant .contain1 {
+  display: flex;
+  justify-content: space-between;
+}
+#restaurants .contain .restaurant .contain1 .nouveau {
   background-color: #99e2d0;
   position: absolute;
   padding: 10px;
@@ -190,28 +205,16 @@ header .fa-arrow-left {
   font-weight: bold;
   color: #008766;
 }
-#restaurants .restaurant {
-  width: 100%;
-  margin-bottom: 15px;
-}
-#restaurants .restaurant_nom {
+#restaurants .contain .restaurant .contain1 .restaurant_nom {
   font-weight: bold;
   padding-left: 10px;
 }
-#restaurants .fa-heart {
-  position: relative;
-  left: 320px;
-  top: -10px;
-}
-#restaurants .restaurant_lieu {
+#restaurants .contain .restaurant .contain1 .restaurant_lieu {
   padding-left: 10px;
   margin-bottom: -30px;
 }
-#restaurants .arrondi {
-  border-radius: 10px 10px 0 0;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+#restaurants .contain .restaurant .contain1 .fa-heart {
+  align-self: center;
 }
 
 #fonctionnement {
@@ -397,6 +400,7 @@ footer a {
   border-radius: 50%;
   color: #008766;
   padding: 5px;
+  -webkit-transition: all 0.5s;
   transition: all 1s;
 }
 .palette .choix1:hover .check, .palette .choix2:hover .check, .palette .choix3:hover .check {
