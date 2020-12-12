@@ -23,6 +23,7 @@ body {
     font-family:"Roboto", times, serif;
     margin-left: 0px;
     margin-right: 0px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,6 +74,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: -80px;
     animation: loaderthree 4s  ;
 }
 @keyframes loaderthree {
@@ -84,8 +86,7 @@ body {
 header {
     width: 100%;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: center;    
     margin-bottom: 20px;  
     .logo {    
         width: 200px;    
@@ -159,9 +160,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    height: 1350px;
     width:100%;
+    align-items: center;    
     background-color:$fondclair;
     padding-bottom: 40px;
 
@@ -173,13 +173,13 @@ header {
     .contain {
         display:flex;
         justify-content: center;
+        width:90%;
         border-radius: 10px;
         background-color:white;
         border: none; 
-        text-decoration: none;  
-        color:black;
         box-shadow: 0px 5px 5px $fondmoyen;
         position: relative;
+        margin-bottom: 20px;
 
         .restaurant {
             width:100%;
@@ -194,6 +194,11 @@ header {
             .contain1 {
                 display:flex;
                 justify-content: space-between;
+                
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
 
                 .nouveau {
                     background-color: $tertiaire;
@@ -210,28 +215,17 @@ header {
                 }    
                 .restaurant_lieu {
                     padding-left: 10px;
-                    margin-bottom: -30px;
+                    
                 } 
                 .fa-heart {
                     align-self: center;
+                    padding-right: 20px;
+                    font-size: 2em;
                 }
             }
         
-
-         
-        
     }
 }
-    
-    
-           
-          
-    
-    
-    
-    
-    
-    
     
     
     
@@ -318,6 +312,8 @@ footer {
 
 .jpg_page {
     width:100%;
+    object-fit: cover;
+    height:257px;
 }
 
 
@@ -395,7 +391,7 @@ footer {
             box-shadow: 0px 5px 5px $fondfonce;
         }}}
 
-        .choix1, .choix2, .choix3 {
+        .choix1, .choix2, .choix3, .choix4 {
             display: flex;
             justify-content: space-between;
             border-radius: 20px;
@@ -509,14 +505,30 @@ footer {
         animation-delay: 750ms;
         animation-fill-mode: forwards;
         }
-        
+
+                
         @keyframes apparition3 {
             0% { opacity: 0; }
             25% { opacity: 0.25; }
             50% { opacity: 0.5; }
             75% { opacity : 0.75; }
             100% { opacity: 1; }
-        }       
+        }  
+        
+    .choix4 {
+
+        animation : apparition4 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        }
+
+        @keyframes apparition4 {
+            0% { opacity: 0; }
+            25% { opacity: 0.25; }
+            50% { opacity: 0.5; }
+            75% { opacity : 0.75; }
+            100% { opacity: 1; }
+        }  
     
     }
 
