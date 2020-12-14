@@ -76,6 +76,7 @@ body {
     justify-content: center;
     margin-top: -80px;
     animation: loaderthree 4s  ;
+    max-width: 1224px;
 }
 @keyframes loaderthree {
     0% { opacity: 0; }
@@ -86,14 +87,15 @@ body {
 header {
     width: 100%;
     display: flex;
-    justify-content: center;    
+    justify-content: center; 
+    margin-top: 20px;   
     margin-bottom: 20px;  
-    .logo {    
+    .logo {   
         width: 200px;    
     }
     .fa-arrow-left {
         position: absolute;
-        top:37px;
+        top:30px;
         left:20px;
         text-decoration: none;
         color:black;
@@ -112,13 +114,15 @@ header {
     form, h1{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        margin-right: 25px;
+        margin-left: 25px;
     }
     h2 {
         color:$iconegris;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        text-align: center;
         font-size: 0.9em;
         
         
@@ -148,7 +152,6 @@ header {
         cursor: pointer;
 
         &:hover {
-            filter: alpha(opacity=70);
             opacity: 0.7;
             box-shadow: 0px 5px 5px $fondfonce;
         }
@@ -165,6 +168,14 @@ header {
     background-color:$fondclair;
     padding-bottom: 40px;
 
+
+    .cont {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
     h3 {
         align-self: start;
         padding-left: 20px;
@@ -184,7 +195,9 @@ header {
         .restaurant {
             width:100%;
             margin-bottom: 15px; 
-            
+            .nom_lieu {
+                flex-grow: 2;
+            }
             .arrondi {
                 border-radius: 10px 10px 0 0;
                 width: 100%;
@@ -313,15 +326,16 @@ footer {
 .jpg_page {
     width:100%;
     object-fit: cover;
-    height:257px;
+    
+}
+#container2 {
+    max-width: 1224px;
 }
 
 
 .palette {
     display: flex;
     flex-direction: column;  
-    justify-content: space-between;  
-    width: 100%;
     border-radius: 40px 40px 0px 0px;
     background-color: $fondmoyen;
     position: relative;
@@ -337,9 +351,7 @@ footer {
         padding-right: 40px;
     }
 
-    .plats {
-        margin-top: -30px;
-    }
+    
     
     .entrees, .plats, .desserts {
         display: flex;
@@ -362,7 +374,7 @@ footer {
             align-self: start; 
             
             hr {
-            color:$tertiaire;
+            border: none;
             background-color: $tertiaire;
             width:60px;
             height: 3px;            
@@ -386,7 +398,7 @@ footer {
         cursor: pointer;
 
         &:hover {
-            filter: alpha(opacity=70);
+            
             opacity: 0.7;
             box-shadow: 0px 5px 5px $fondfonce;
         }}}
@@ -401,7 +413,7 @@ footer {
             margin-bottom: 20px;
             cursor: pointer;
             opacity: 0;
-            height:72px;
+            
             
             .check {
                 background-color:$tertiaire;
@@ -410,15 +422,16 @@ footer {
                 text-align: center;
                 width:0;
                 transition: all 1s ;
+                
                             
                      
             }
             .column {
                 display: flex;
                 flex-direction:column;
-                flex: 2 2 auto;
+                flex-grow: 2;
                 align-content:space-between;
-                width:375px;
+                
 
                 h3 {
                     margin-top: 0;
@@ -428,45 +441,52 @@ footer {
                     font-size: 1em;
                 }
             }
+            
+
             .fa-check {
                 display: none;
                 position: relative;                
-                top:30px;
+                top:25px;
                 background-color: white;
                 border-radius: 50%;
                 color:$tertiairetexte;
-                padding: 5px;
-                -webkit-transition: all 0.5s;
+                padding: 5px;                
                 transition: all 1s ;
                 
             }
             
 
             &:hover .check{  
-                width:20%;
-                                
-                .fa-check{
+                width:15%;
+                .fa-check {
                     display: inline;
                     transform: rotate(360deg);
-                    
                 }
+            }   
+            
                     
-            }
-           
-            .plat {
-                font-weight: bold;
-            }
+            
+                       
             .accompagnement_prix {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;                 
-            }    
+            .accompagnement {
+                overflow: hidden;
+                text-overflow: ellipsis; 
+                white-space: nowrap;
+                padding-bottom: 10px;
+                max-width: 85%;
+                                                
+            }  
             .prix {
                 padding-right: 10px;
-                font-weight: bold;                
+                padding-bottom: 10px;
+                font-weight: bold; 
+                             
                
-                
-                
+            } 
+
             }    
         }    
     
@@ -476,6 +496,26 @@ footer {
         animation-fill-mode: forwards;
     }
 
+    .choix2 {
+
+        animation : apparition 1s;
+        animation-delay: 500ms;
+        animation-fill-mode: forwards;
+        }
+     
+    .choix3 {
+
+        animation : apparition 1s;
+        animation-delay: 750ms;
+        animation-fill-mode: forwards;
+        }
+
+    .choix4 {
+
+        animation : apparition 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        }
         @keyframes apparition {
             0% { opacity: 0; }
             25% { opacity: 0.25; }
@@ -483,82 +523,62 @@ footer {
             75% { opacity : 0.75; }
             100% { opacity: 1; }
         }
-
-    .choix2 {
-
-        animation : apparition2 1s;
-        animation-delay: 500ms;
-        animation-fill-mode: forwards;
-        }
-    
-        @keyframes apparition2 {
-            0% { opacity: 0; }
-            25% { opacity: 0.25; }
-            50% { opacity: 0.5; }
-            75% { opacity : 0.75; }
-            100% { opacity: 1; }
-        }   
-        
-    .choix3 {
-
-        animation : apparition3 1s;
-        animation-delay: 750ms;
-        animation-fill-mode: forwards;
-        }
-
-                
-        @keyframes apparition3 {
-            0% { opacity: 0; }
-            25% { opacity: 0.25; }
-            50% { opacity: 0.5; }
-            75% { opacity : 0.75; }
-            100% { opacity: 1; }
-        }  
-        
-    .choix4 {
-
-        animation : apparition4 1s;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
-        }
-
-        @keyframes apparition4 {
-            0% { opacity: 0; }
-            25% { opacity: 0.25; }
-            50% { opacity: 0.5; }
-            75% { opacity : 0.75; }
-            100% { opacity: 1; }
-        }  
     
     }
-
-@media screen and (min-width: 668px) {
-    body {
-        width:100%;
+  
+@media screen and (min-width: 768px) {
+    
+    .fonct {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-    }    
-    #container {
-        max-width: 1320px;
+        justify-content: space-between;
+    }
+    .choix {
+        width:30%;
         
     }
     .fonct_notice {
         display: flex;
         justify-content: center;
-    }
-    .arrondi {
-        height: 300px;        
-    }
-    .logofooter {
-        display: block;
-        margin-left: auto;
-        margin-right: auto
-    }
-    ul {
-        display: flex;
-        flex-direction: column;
         align-items: center;
+        height:30px;
     }
-}
+    #fonctionnement .number {
+        top:45px;
+    }
+    
+    .logofooter {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    
+  }
 
+  @media screen and (min-width: 1224px) {
+    
+    #restaurants .contain {
+        width:45%;
+    } 
+    
+    #restaurants .cont {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .menus {
+        display:flex;
+        justify-content: center;
+    }
+    .entrees, .plats, .desserts{
+        width:30%;
+        
+    }
+  }
