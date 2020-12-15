@@ -110,6 +110,11 @@ header .fa-arrow-left {
   color: black;
 }
 
+h1 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
 #search {
   width: 100%;
   background-color: #f6f6f6;
@@ -119,18 +124,14 @@ header .fa-arrow-left {
   margin-top: 5px;
 }
 #search form, #search h1 {
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  margin-right: 25px;
-  margin-left: 25px;
 }
 #search h2 {
   color: #7e7e7e;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   font-size: 0.9em;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 #search #btn_search {
   display: flex;
@@ -196,8 +197,9 @@ header .fa-arrow-left {
   width: 100%;
   margin-bottom: 15px;
 }
-#restaurants .contain .restaurant .nom_lieu {
-  flex-grow: 2;
+#restaurants .contain .restaurant a {
+  text-decoration: none;
+  color: black;
 }
 #restaurants .contain .restaurant .arrondi {
   border-radius: 10px 10px 0 0;
@@ -208,10 +210,6 @@ header .fa-arrow-left {
 #restaurants .contain .restaurant .contain1 {
   display: flex;
   justify-content: space-between;
-}
-#restaurants .contain .restaurant .contain1 a {
-  text-decoration: none;
-  color: black;
 }
 #restaurants .contain .restaurant .contain1 .nouveau {
   background-color: #99e2d0;
@@ -229,10 +227,25 @@ header .fa-arrow-left {
 #restaurants .contain .restaurant .contain1 .restaurant_lieu {
   padding-left: 10px;
 }
-#restaurants .contain .restaurant .contain1 .fa-heart {
+#restaurants .contain .restaurant .contain1 .coeur {
   align-self: center;
   padding-right: 20px;
   font-size: 2em;
+}
+#restaurants .contain .restaurant .contain1 .coeur:hover {
+  color: red;
+  opacity: 0;
+}
+#restaurants .contain .restaurant .contain1 .coeur:hover:hover .coeur2 {
+  display: block;
+}
+#restaurants .contain .restaurant .contain1 .coeur2 {
+  display: none;
+  position: absolute;
+  align-self: center;
+  padding-right: 20px;
+  font-size: 2em;
+  transition: all;
 }
 
 #fonctionnement {
