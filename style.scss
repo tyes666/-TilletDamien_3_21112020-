@@ -357,15 +357,15 @@ footer {
 // page la palette
 
 .jpg_page {
-    width:100%;
     object-fit: cover;
-    
+    width: 100%;
+    height: 260px;
+        
 }
 #container2 {
-    max-width: 1224px;
+    width:100%;
+    max-width: 1250px;
 }
-
-
 .palette {
     display: flex;
     flex-direction: column;  
@@ -495,9 +495,6 @@ footer {
                    
                 }
               
-            
-                    
-            
                        
             .accompagnement_prix {
                 display: flex;
@@ -560,6 +557,8 @@ footer {
   
 @media screen and (min-width: 768px) {
     
+    
+
     .fonct {
         display: flex;
         justify-content: space-between;
@@ -595,6 +594,7 @@ footer {
 
   @media screen and (min-width: 1224px) {
     
+
     #restaurants .contain {
         width:45%;
     } 
