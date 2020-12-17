@@ -245,7 +245,7 @@ h1 {
   position: absolute;
   left: 0;
   top: 0;
-  background: #9356DC;
+  background: #9356dc;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -257,7 +257,7 @@ h1 {
   opacity: 1;
 }
 #restaurants .contain .restaurant .contain1 .coeur1:hover {
-  background: #9356DC;
+  background: #9356dc;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px white;
